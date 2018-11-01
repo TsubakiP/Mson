@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration.Mson", "src\Tsubaki.Configuration.Mson\Tsubaki.Configuration.Mson.csproj", "{257AF67C-A990-4A0B-94D0-6078FFF9DF39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration.Mson.ConsoleTest", "test\Tsubaki.Configuration.Mson.ConsoleTest\Tsubaki.Configuration.Mson.ConsoleTest.csproj", "{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{257AF67C-A990-4A0B-94D0-6078FFF9DF39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257AF67C-A990-4A0B-94D0-6078FFF9DF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257AF67C-A990-4A0B-94D0-6078FFF9DF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257AF67C-A990-4A0B-94D0-6078FFF9DF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6A5AF0F-0ACB-48E3-9FF5-D257127F456C}
+	EndGlobalSection
+EndGlobal
