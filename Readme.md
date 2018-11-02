@@ -1,7 +1,5 @@
 ﻿# Overview
-
-Tsubaki-Config Syntax for Object Notation
-
+ 
 # Types
 ## Fields
 | Type | Symbol/Syntax | Example | Details |
