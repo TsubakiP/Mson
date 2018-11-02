@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Tsubaki.Configuration.Mson.ConsoleTest</RootNamespace>
-    <AssemblyName>Tsubaki.Configuration.Mson.ConsoleTest</AssemblyName>
+    <RootNamespace>Tsubaki.Configuration.Tcyon.ConsoleTest</RootNamespace>
+    <AssemblyName>Tsubaki.Configuration.Tcyon.ConsoleTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Tsubaki.Configuration.Tcyon\Tsubaki.Configuration.Tcyon.csproj">
+      <Project>{257af67c-a990-4a0b-94d0-6078fff9df39}</Project>
+      <Name>Tsubaki.Configuration.Mson</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

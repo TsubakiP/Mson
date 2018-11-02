@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration.Mson", "src\Tsubaki.Configuration.Mson\Tsubaki.Configuration.Mson.csproj", "{257AF67C-A990-4A0B-94D0-6078FFF9DF39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration.Tcyon", "src\Tsubaki.Configuration.Tcyon\Tsubaki.Configuration.Tcyon.csproj", "{257AF67C-A990-4A0B-94D0-6078FFF9DF39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration.Mson.ConsoleTest", "test\Tsubaki.Configuration.Mson.ConsoleTest\Tsubaki.Configuration.Mson.ConsoleTest.csproj", "{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration.Tcyon.ConsoleTest", "test\Tsubaki.Configuration.Tcyon.ConsoleTest\Tsubaki.Configuration.Tcyon.ConsoleTest.csproj", "{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8E090253-9FDC-4AFB-A687-BFF5B0B6D038}"
+	ProjectSection(SolutionItems) = preProject
+		doc\Todos.md = doc\Todos.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

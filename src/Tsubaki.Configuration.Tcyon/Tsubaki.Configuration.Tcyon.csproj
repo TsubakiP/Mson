@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>257af67c-a990-4a0b-94d0-6078fff9df39</ProjectGuid>
+    <ProjectGuid>{257AF67C-A990-4A0B-94D0-6078FFF9DF39}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tsubaki.Configuration.Mson</RootNamespace>
-    <AssemblyName>Tsubaki.Configuration.Mson</AssemblyName>
+    <RootNamespace>Tsubaki.Configuration.Tcyon</RootNamespace>
+    <AssemblyName>Tsubaki.Configuration.Tcyon</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,26 +29,37 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Internal\FieldParser.cs" />
+    <Compile Include="Internal\BooleanParser.cs" />
+    <Compile Include="Internal\ByteParser.cs" />
+    <Compile Include="Internal\DecimalParser.cs" />
+    <Compile Include="Internal\DoubleParser.cs" />
+    <Compile Include="Internal\FloatParser.cs" />
+    <Compile Include="IFieldParser.cs" />
+    <Compile Include="Internal\Int16Parser.cs" />
+    <Compile Include="Internal\Int32Parser.cs" />
+    <Compile Include="Internal\Int64Parser.cs" />
+    <Compile Include="Internal\IParserGlue.cs" />
+    <Compile Include="Interpreter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Internal\SByteParser.cs" />
+    <Compile Include="Internal\StringParser.cs" />
+    <Compile Include="Internal\UInt16Parser.cs" />
+    <Compile Include="Internal\UInt32Parser.cs" />
+    <Compile Include="Internal\UInt64Parser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
