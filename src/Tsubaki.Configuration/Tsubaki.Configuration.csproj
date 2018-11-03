@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{257AF67C-A990-4A0B-94D0-6078FFF9DF39}</ProjectGuid>
+    <ProjectGuid>{78C0C11C-089A-487E-AF6A-48766E2B384A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tsubaki.Configuration.Tcyon</RootNamespace>
-    <AssemblyName>Tsubaki.Configuration.Tcyon</AssemblyName>
+    <RootNamespace>Tsubaki.Configuration</RootNamespace>
+    <AssemblyName>Tsubaki.Configuration</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,7 +29,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -42,30 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fx\Fx.cs" />
-    <Compile Include="Fx\ICodex.cs" />
-    <Compile Include="Fx\Primitives\BooleanFx.cs" />
-    <Compile Include="Fx\Primitives\CurrencyFx.cs" />
-    <Compile Include="Fx\Primitives\DeciamlFx.cs" />
-    <Compile Include="Fx\Primitives\DoubleFx.cs" />
-    <Compile Include="Fx\Primitives\Int08Fx.cs" />
-    <Compile Include="Fx\Primitives\Int16Fx.cs" />
-    <Compile Include="Fx\Primitives\Int32Fx.cs" />
-    <Compile Include="Fx\Primitives\Int64Fx.cs" />
-    <Compile Include="Fx\Primitives\IntegralFx.cs" />
-    <Compile Include="Fx\Primitives\SingleFx.cs" />
-    <Compile Include="Fx\Primitives\StringFx.cs" />
-    <Compile Include="Fx\Primitives\UInt08Fx.cs" />
-    <Compile Include="Fx\Primitives\UInt16Fx.cs" />
-    <Compile Include="Fx\Primitives\UInt32Fx.cs" />
-    <Compile Include="Fx\Primitives\UInt64Fx.cs" />
-    <Compile Include="Fx\Primitives\UnsignedIntegralFx.cs" />
-    <Compile Include="Fx\Special\DateTimeFx.cs" />
-    <Compile Include="Fx\Special\GuidFx.cs" />
-    <Compile Include="Fx\Special\ResourceFx.cs" />
-    <Compile Include="Fx\Special\TypeFx.cs" />
-    <Compile Include="Fx\Special\UriFx.cs" />
+    <Compile Include="IgnoreAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouteAttribute.cs" />
+    <Compile Include="SelfDisciplined.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

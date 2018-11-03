@@ -2,52 +2,64 @@
 // Contact: mailto:viyrex.aka.yuyu@gmail.com
 // Github: https://github.com/0x0001F36D
 
-namespace Tsubaki.Configuration.Tcyon.X
+namespace Tsubaki.Configuration.X
 {
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Linq;
     using System.Runtime.InteropServices;
+    using System.Runtime.Serialization.Formatters.Binary;
     using System.Text;
     using System.Text.RegularExpressions;
-    using Tsubaki.Configuration.Tcyon.Fx;
-
+    
+    using System.Reflection;
+    using System.IO;
+    using System.Runtime.Serialization;
+    using System.ComponentModel;
 
     internal class Program
-    {
-
+    { 
         private static void Main(string[] args)
         {
-             
-            var feed = @"
-- A : 12s
-- B :456.2m
-- C : 777
-- D : 
-uri:[http://x.com]
-- E : true
-- F:   ON
-- G: Off
-- H:  'off'
-";
-            var fx = new BooleanFx();
-
-            /*var sss = fx.Build(feed, new Uri("http://x.com") ).ToList();
-
-            foreach (var item in sss)
+            try
             {
-                Console.WriteLine(item);
-            }*/
-
-            foreach (var item in fx.Fetch(feed))
+                var entity = YourClass.Load();
+                if (entity.Text is string s)
+                {
+                    Console.WriteLine(s);
+                    Console.WriteLine(entity.IgnoreMe);
+                    entity.Text = null;
+                }
+                else
+                {
+                    Console.WriteLine(entity.IgnoreMe);
+                    entity.Text = "反序列化成功";
+                }
+                entity.IgnoreMe = "Hello";
+                entity.Save();
+            }
+            finally
             {
-                Console.WriteLine(item);
+            }
+            Console.ReadKey();
+        }
+
+        [Serializable]
+        public class YourClass : SelfDisciplined<YourClass>
+        {
+            public YourClass()
+            {
+
             }
 
-            Console.ReadKey();
-            return;
-            
+            private YourClass(SerializationInfo info, StreamingContext context) : base(info, context)
+            {
+            }
+
+            [Ignore]
+            public string IgnoreMe { get; internal set; }
+            public object Text { get; internal set; }
         }
     }
 }

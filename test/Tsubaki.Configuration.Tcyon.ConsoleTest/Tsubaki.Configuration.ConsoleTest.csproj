@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Tsubaki.Configuration.Tcyon.ConsoleTest</RootNamespace>
-    <AssemblyName>Tsubaki.Configuration.Tcyon.ConsoleTest</AssemblyName>
+    <RootNamespace>Tsubaki.Configuration.ConsoleTest</RootNamespace>
+    <AssemblyName>Tsubaki.Configuration.ConsoleTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -40,7 +40,8 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Test.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,12 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Test.snk" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Tsubaki.Configuration.Tcyon\Tsubaki.Configuration.Tcyon.csproj">
-      <Project>{257af67c-a990-4a0b-94d0-6078fff9df39}</Project>
-      <Name>Tsubaki.Configuration.Tcyon</Name>
+    <ProjectReference Include="..\..\src\Tsubaki.Configuration\Tsubaki.Configuration.csproj">
+      <Project>{78c0c11c-089a-487e-af6a-48766e2b384a}</Project>
+      <Name>Tsubaki.Configuration</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
