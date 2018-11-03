@@ -6,7 +6,7 @@
 | ---- |:---:| --- | --- |
 |<ul><li>[x] byte</li></ul> | b | - Field : 30b |
 |<ul><li>[x] sbyte</li></ul> | B | - Field : 30B |
-|<ul><li>[x] bool </li></ul> | (auto) | - Field : on <br> - Field : false | True : **_on_**, **_enable_**, **_yes_**, **_true_**<br>False : **_off_**, **_disable_**, **_no_**, **_false_** 
+|<ul><li>[ ] bool </li></ul> | (auto) | - Field : on <br> - Field : false | True : **_on_**, **_enable_**, **_yes_**, **_true_**<br>False : **_off_**, **_disable_**, **_no_**, **_false_** 
 |<ul><li>[x] short </li></ul>| s | - Field : 30s |
 |<ul><li>[x] ushort </li></ul>| S | - Field : 30S |
 |<ul><li>[x] int </li></ul>|  (auto) | - Field : 30 |
@@ -16,8 +16,8 @@
 |<ul><li>[x] double</li></ul> | F | - Field : 30.0F |
 |<ul><li>[x] float </li></ul>| f | - Field : 30.0f |
 |<ul><li>[x] decimal</li></ul> | m | - Field : 30m  |
-|<ul><li>[x] string </li></ul>| '&nbsp;&nbsp;&nbsp;&nbsp;' | - Field : 'Hello, My son!'  |
-|<ul><li>[ ] Uri</li></ul> | \[name](url-string)<br>url:[url-string] | - \[X.COM](http:\/\/x.com)<br>- Field : url:(http:\/\/x.com) | Seems like: - [X.COM](http://x.com)<br> you can also use 'link' to replace 'url'.|
+|<ul><li>[x] string </li></ul>| '&nbsp;&nbsp;&nbsp;&nbsp;' | - Field : 'Hello, My son!' <br>  - Field : 'I''m not your son!!!' |
+|<ul><li>[x] Uri</li></ul> | \[name](uri-string)<br>uri:[uri-string] | - \[X.COM](http:\/\/x.com)<br>- Field : uri:(http:\/\/x.com) | Seems like: - [X.COM](http://x.com)<br><br>   |
 
 ※ *_Not supported_* **_'Character'_** *_type, If you wanna use then just implement it by yourself!_*
 ## Arrays
@@ -34,11 +34,11 @@
 ## Ultra
 | Type | Syntax | Sample |
 | ---- |:--------- | --- |
-|<ul><li>[ ] DateTime </li></ul>| time:[iso-8601]<br>time:[base64-string] | - Time : time:[12/31/9999 23:59:59]<br>- Time : time:[/z839HUoyms=] | ISO-8601 / RFC-1123
-|<ul><li>[ ] Guid </li></ul>| guid:[base64-string] | - Guid : guid:[8+7/638hzUm13v8HAtwNtw==] |
+|<ul><li>[x] DateTime </li></ul>| time:[base64-string] | - Time : time:[/z839HUoyms=] | ISO-8601 / RFC-1123
+|<ul><li>[x] Guid </li></ul>| guid:[base64-string] | - Guid : guid:[8+7/638hzUm13v8HAtwNtw==] |
 |<ul><li>[ ] Image </li></ul>| image:format[base64-string] | - Image : image:png[tlzUd0c5GsLj3l2tVNl1mb...etc] |
 |<ul><li>[ ] Delegate</li></ul> | lambda:[base64-string] | - Delegate : lambda:[mbjUs5c23ltdlzVtL1GlN0...etc] |
-|<ul><li>[ ] Type </li></ul>| type:[base64-string] | - Type : type:[U3lzdGVtLlN0cms2tlbj15...etc] |
+|<ul><li>[x] Type </li></ul>| type:[base64-string] | - Type : type:[U3lzdGVtLlN0cms2tlbj15...etc] |
 |<ul><li>[ ] Custom </li></ul>| yourName:[your-format] | - Example: [!@#$%^&*]
 
 

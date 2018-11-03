@@ -14,5 +14,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("0f3bf0eb-5233-4a69-824c-b7643a39c9a0")]
-[assembly: AssemblyVersion("1.0.215.6880")]
-[assembly: AssemblyFileVersion("1.0.215.6880")]
+[assembly: AssemblyVersion("1.0.370.6881")]
+[assembly: AssemblyFileVersion("1.0.370.6881")]
+//[assembly: AssemblyKeyFile("Test.snk")]

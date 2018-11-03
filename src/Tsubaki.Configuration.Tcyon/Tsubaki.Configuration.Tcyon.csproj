@@ -42,24 +42,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Internal\FieldParser.cs" />
-    <Compile Include="Internal\BooleanParser.cs" />
-    <Compile Include="Internal\ByteParser.cs" />
-    <Compile Include="Internal\DecimalParser.cs" />
-    <Compile Include="Internal\DoubleParser.cs" />
-    <Compile Include="Internal\FloatParser.cs" />
-    <Compile Include="IFieldParser.cs" />
-    <Compile Include="Internal\Int16Parser.cs" />
-    <Compile Include="Internal\Int32Parser.cs" />
-    <Compile Include="Internal\Int64Parser.cs" />
-    <Compile Include="Internal\IParserGlue.cs" />
-    <Compile Include="Interpreter.cs" />
+    <Compile Include="Fx\Fx.cs" />
+    <Compile Include="Fx\ICodex.cs" />
+    <Compile Include="Fx\Primitives\BooleanFx.cs" />
+    <Compile Include="Fx\Primitives\CurrencyFx.cs" />
+    <Compile Include="Fx\Primitives\DeciamlFx.cs" />
+    <Compile Include="Fx\Primitives\DoubleFx.cs" />
+    <Compile Include="Fx\Primitives\Int08Fx.cs" />
+    <Compile Include="Fx\Primitives\Int16Fx.cs" />
+    <Compile Include="Fx\Primitives\Int32Fx.cs" />
+    <Compile Include="Fx\Primitives\Int64Fx.cs" />
+    <Compile Include="Fx\Primitives\IntegralFx.cs" />
+    <Compile Include="Fx\Primitives\SingleFx.cs" />
+    <Compile Include="Fx\Primitives\StringFx.cs" />
+    <Compile Include="Fx\Primitives\SwitchFx.cs" />
+    <Compile Include="Fx\Primitives\UInt08Fx.cs" />
+    <Compile Include="Fx\Primitives\UInt16Fx.cs" />
+    <Compile Include="Fx\Primitives\UInt32Fx.cs" />
+    <Compile Include="Fx\Primitives\UInt64Fx.cs" />
+    <Compile Include="Fx\Primitives\UnsignedIntegralFx.cs" />
+    <Compile Include="Fx\Special\DateTimeFx.cs" />
+    <Compile Include="Fx\Special\GuidFx.cs" />
+    <Compile Include="Fx\Special\ResourceFx.cs" />
+    <Compile Include="Fx\Special\TypeFx.cs" />
+    <Compile Include="Fx\Special\UriFx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Internal\SByteParser.cs" />
-    <Compile Include="Internal\StringParser.cs" />
-    <Compile Include="Internal\UInt16Parser.cs" />
-    <Compile Include="Internal\UInt32Parser.cs" />
-    <Compile Include="Internal\UInt64Parser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
