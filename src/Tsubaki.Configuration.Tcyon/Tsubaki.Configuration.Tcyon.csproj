@@ -55,7 +55,6 @@
     <Compile Include="Fx\Primitives\IntegralFx.cs" />
     <Compile Include="Fx\Primitives\SingleFx.cs" />
     <Compile Include="Fx\Primitives\StringFx.cs" />
-    <Compile Include="Fx\Primitives\SwitchFx.cs" />
     <Compile Include="Fx\Primitives\UInt08Fx.cs" />
     <Compile Include="Fx\Primitives\UInt16Fx.cs" />
     <Compile Include="Fx\Primitives\UInt32Fx.cs" />

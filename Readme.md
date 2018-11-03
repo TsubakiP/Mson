@@ -4,8 +4,8 @@
 ## Fields
 | Type | Symbol/Syntax | Example | Details |
 | ---- |:---:| --- | --- |
-|<ul><li>[x] byte</li></ul> | b | - Field : 30b |
-|<ul><li>[x] sbyte</li></ul> | B | - Field : 30B |
+|<ul><li>[x] sbyte</li></ul> | b | - Field : 30b |
+|<ul><li>[x] byte</li></ul> | B | - Field : 30B |
 |<ul><li>[ ] bool </li></ul> | (auto) | - Field : on <br> - Field : false | True : **_on_**, **_enable_**, **_yes_**, **_true_**<br>False : **_off_**, **_disable_**, **_no_**, **_false_** 
 |<ul><li>[x] short </li></ul>| s | - Field : 30s |
 |<ul><li>[x] ushort </li></ul>| S | - Field : 30S |
