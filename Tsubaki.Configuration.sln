@@ -3,29 +3,50 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration.ConsoleTest", "test\Tsubaki.Configuration.Tcyon.ConsoleTest\Tsubaki.Configuration.ConsoleTest.csproj", "{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8E090253-9FDC-4AFB-A687-BFF5B0B6D038}"
 	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration", "src\Tsubaki.Configuration\Tsubaki.Configuration.csproj", "{78C0C11C-089A-487E-AF6A-48766E2B384A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration.UnitTest", "test\Tsubaki.Configuration.UnitTest\Tsubaki.Configuration.UnitTest.csproj", "{06C252D6-209F-45E2-B7F1-27B61D0CBF24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tsubaki.Configuration.ConsoleTest", "test\Tsubaki.Configuration.ConsoleTest\Tsubaki.Configuration.ConsoleTest.csproj", "{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{78C0C11C-089A-487E-AF6A-48766E2B384A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{78C0C11C-089A-487E-AF6A-48766E2B384A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C0C11C-089A-487E-AF6A-48766E2B384A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{78C0C11C-089A-487E-AF6A-48766E2B384A}.Debug|x64.Build.0 = Debug|Any CPU
 		{78C0C11C-089A-487E-AF6A-48766E2B384A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78C0C11C-089A-487E-AF6A-48766E2B384A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78C0C11C-089A-487E-AF6A-48766E2B384A}.Release|x64.ActiveCfg = Release|Any CPU
+		{78C0C11C-089A-487E-AF6A-48766E2B384A}.Release|x64.Build.0 = Release|Any CPU
+		{06C252D6-209F-45E2-B7F1-27B61D0CBF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C252D6-209F-45E2-B7F1-27B61D0CBF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C252D6-209F-45E2-B7F1-27B61D0CBF24}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{06C252D6-209F-45E2-B7F1-27B61D0CBF24}.Debug|x64.Build.0 = Debug|Any CPU
+		{06C252D6-209F-45E2-B7F1-27B61D0CBF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C252D6-209F-45E2-B7F1-27B61D0CBF24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C252D6-209F-45E2-B7F1-27B61D0CBF24}.Release|x64.ActiveCfg = Release|Any CPU
+		{06C252D6-209F-45E2-B7F1-27B61D0CBF24}.Release|x64.Build.0 = Release|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Debug|x64.Build.0 = Debug|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Release|x64.ActiveCfg = Release|Any CPU
+		{0F3BF0EB-5233-4A69-824C-B7643A39C9A0}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

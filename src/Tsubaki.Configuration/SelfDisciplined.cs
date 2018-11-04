@@ -1,105 +1,78 @@
-﻿
+﻿// Author: Viyrex(aka Yuyu)
+// Contact: mailto:viyrex.aka.yuyu@gmail.com
+// Github: https://github.com/0x0001F36D
+
 namespace Tsubaki.Configuration
 {
     using System;
     using System.ComponentModel;
-    using System.Diagnostics;
     using System.IO;
     using System.Reflection;
     using System.Runtime.Serialization;
-    using System.Runtime.Serialization.Formatters.Binary;
 
+    using Tsubaki.Configuration.Attributes;
+    using Tsubaki.Configuration.Contracts;
+    using Tsubaki.Configuration.Serialization.YamlDotNet;
 
-    public abstract class SelfDisciplined<T> : IDisposable, ISerializable where T : class, new()
+    public abstract class SelfDisciplined<T> : IDisposable where T : class, new()
     {
-        protected SelfDisciplined()
-        {
+        private readonly static ISerializer s_default = new YmlSerializer();
 
+        private static ISerializer s_serializer;
+
+        public static ISerializer Serializer
+        {
+            get => s_serializer ?? s_default;
+            set => s_serializer = value;
         }
+
         public static T Load(bool createWithoutThrown = true)
         {
             var type = typeof(T);
             var file = type.GetCustomAttribute<RouteAttribute>() is RouteAttribute cf ? cf.File ?? type.Name : type.Name;
             var f = new FileInfo(file);
+            if (!f.Exists)
+                return new T();
+
             var result = default(T);
             using (var fs = f.Open(FileMode.OpenOrCreate))
             {
-                try
+                using (var sr = new StreamReader(fs))
                 {
-                    var bf = new BinaryFormatter();
-                    var obj = bf.Deserialize(fs);
-                    result = (T)obj;
-                }
-                catch (SerializationException se)
-                {
-                    Debug.WriteLine(se.Message);
-                    result = createWithoutThrown ? new T() : throw se;
-                }
-                finally
-                {
-                    fs.Dispose();
+                    if (!Serializer.TryDeserialize(sr, out result))
+                    {
+                        result = createWithoutThrown
+                            ? new T()
+                            : throw new SerializationException("can't deserialize yaml");
+                    }
                 }
             }
             return result;
         }
 
-        public void Save()
+        public bool Save()
         {
             var type = this.GetType();
             var file = type.GetCustomAttribute<RouteAttribute>() is RouteAttribute cf ? cf.File ?? type.Name : type.Name;
             var f = new FileInfo(file);
             using (var fs = f.Open(FileMode.OpenOrCreate))
             {
-                try
+                using (var sw = new StreamWriter(fs))
                 {
-                    var bf = new BinaryFormatter();
-                    bf.Serialize(fs, this);
-                }
-                catch (SerializationException se)
-                {
-                    Debug.WriteLine(se.Message);
-                }
-                finally
-                {
-                    fs.Dispose();
+                    return Serializer.TrySerialize(sw, this);
                 }
             }
         }
 
-        void IDisposable.Dispose() => this.Save();
-
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
+        void IDisposable.Dispose()
         {
-            var props = this.GetType().GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-            for (int index = 0; index < props.Length; index++)
-            {
-                var current = props[index];
-                if (current.SetMethod is null)
-                    throw new NotSupportedException();
-                else if (current.GetCustomAttribute<IgnoreAttribute>() is null)
-                {
-                    info.AddValue(current.Name, current.GetValue(this));
-                }
-            }
+            this.Dispose();
+            this.Save();
         }
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        protected SelfDisciplined(SerializationInfo info, StreamingContext context)
+        protected virtual void Dispose()
         {
-            var props = this.GetType().GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-            for (int index = 0; index < props.Length; index++)
-            {
-                var current = props[index];
-                if (current.SetMethod is null)
-                    throw new NotSupportedException();
-                else if (current.GetCustomAttribute<IgnoreAttribute>() is null)
-                {
-                    current.SetValue(this, info.GetValue(current.Name, current.PropertyType));
-                }
-            }
         }
     }
-
-
 }
