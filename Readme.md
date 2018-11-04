@@ -13,14 +13,14 @@ public class YourClass : SelfDisciplined<YourClass>
 Then try this and run it twice!
 ```csharp
 var obj = YourClass.Load();
-if (entity.Text is string s)
+if (entity.YourProperty is string s)
 {
     Debug.WriteLine(s);
-    entity.Text = null;
+    entity.YourProperty = null;
 }
 else
 {
-    entity.Text = "Success";
+    entity.YourProperty = "Success";
 }
 obj.Save();
 ```
